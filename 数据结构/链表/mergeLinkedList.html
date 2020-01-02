@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="LinkedList.js"></script>
+<script src="组合两个链表.js"></script>
+<script>
+
+  let list1 = new LinkedList();
+  for (let i = 0; i < 10; i++) {
+    let num = Math.ceil(Math.random() * 10);
+    list1.append(num);
+  }
+
+  let list2 = new LinkedList();
+  for (let i = 10; i < 20; i++) {
+    let num = Math.ceil(Math.random() * 10);
+    list2.append(num);
+  }
+  console.log(list1.toArray(), list2.toArray());
+  console.log(mergeLinkedList(list1, list2).toArray().sort((a, b) => a - b));
+
+</script>
+</body>
+</html>

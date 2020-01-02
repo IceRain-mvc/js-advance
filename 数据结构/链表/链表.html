@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="LinkedList.js"></script>
+<script>
+  let list = new LinkedList();
+  // list.append('1');
+  // list.append('a');
+  // list.append('b');
+  // list.append(4);
+
+  let arr = [];
+  for (let i = 0; i < 1000000; i++) {
+    arr.push(i);
+    list.append(i)
+  }
+
+
+
+  let start = performance.now();
+  for (let i = 0; i < 999999; i++) {
+    // arr.shift();
+    list.removeAt(0);
+  }
+
+  let end = performance.now();
+  console.log(end - start);
+
+
+
+</script>
+</body>
+</html>

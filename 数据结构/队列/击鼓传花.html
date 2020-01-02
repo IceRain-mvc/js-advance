@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="队列.js"></script>
+
+<script>
+  //['1','2','3','4','5','6'] , 5
+  function passGame(nameList, num) {
+    //记录 谁是最后的胜利者
+    let queue = new Queue();
+
+    for (let i = 0; i < nameList.length; i++) {
+      queue.enqueue(nameList[i]);
+    }
+
+    //游戏开始
+    while (queue.size() > 1) {
+      // 1   2   3  4
+      for (let i = 0; i < num - 1; i++) {
+        // if (i === num - 1)
+        queue.enqueue(queue.dequeue())
+      }
+      // 5
+      queue.dequeue();
+    }
+    return queue.toString();
+  }
+
+  console.log(passGame(['小苍', '小南', '小庆', '小敏', '小辉', '小泽', '笑话'], 5));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="LinkedList.js"></script>
+<script src="Queue1.js"></script>
+<script src="Queue.js"></script>
+
+<script>
+
+  function forQueue(arr) {
+    //入队
+    let queue = new Queue();
+    for (let i = 0; i < arr.length; i++) {
+      queue.enqueue(arr[i]);
+    }
+    let looser = [];
+    // console.log(queue);
+    while (queue.sizes() > 1) {
+      let index = 0;
+      let randoms = Math.ceil(Math.random() * 10);//0-1
+      while (index < randoms - 1) {
+        queue.enqueue(queue.outqueue());
+        index++;
+      }
+      let str = queue.outqueue();
+      // console.log(randoms, str);
+      looser.push(str);
+    }
+    return queue.outqueue();
+  }
+
+
+  function forQueue1(arr) {
+    //入队
+    let queue = new Queue1();
+    for (let i = 0; i < arr.length; i++) {
+      queue.enqueue(arr[i]);
+    }
+    let looser = [];
+    // console.log(queue);
+    while (queue.sizes() > 1) {
+      let index = 0;
+      let randoms = Math.ceil(Math.random() * 10);//0-1
+      while (index < randoms - 1) {
+        queue.enqueue(queue.outqueue());
+        index++;
+      }
+      let str = queue.outqueue();
+      // console.log(randoms, str);
+      looser.push(str);
+    }
+    return queue.outqueue();
+  }
+
+
+  let arr1 = [];
+  for (let i = 0; i < 100000; i++) {
+    arr1.push(i);
+  }
+
+  let start1 = performance.now();
+  forQueue(arr1);
+  let end1 = performance.now();
+  console.log("数组队列的耗时:",end1-start1);
+
+
+  let start2 = performance.now();
+  console.log(forQueue1(arr1));
+  let end2 = performance.now();
+  console.log("链表队列的耗时:",end2-start2);
+
+
+</script>
+</body>
+</html>
