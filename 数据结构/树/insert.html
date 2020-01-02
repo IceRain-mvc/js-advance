@@ -10,11 +10,21 @@
 <script>
   let binarySearchTree = new BinarySearchTree();
 
-  binarySearchTree.insert(20);
-  binarySearchTree.insert(22);
-  binarySearchTree.insert(10);
-  binarySearchTree.insert(21);
-  console.log(binarySearchTree);
+  let arr = [];
+  for (let i = 0; i < 10; i++) {
+    let num = Math.ceil(Math.random() * 100)
+    arr.push(num);
+    binarySearchTree.insert(num);
+  }
+  console.log(arr);
+  console.log(binarySearchTree.max());
+
+  let arr1 = [];
+  const handler = (key) => {
+    arr1.push(key);
+  };
+  binarySearchTree.midTraverse(handler);
+  console.log(arr1);
 
 
 </script>
