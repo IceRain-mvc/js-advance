@@ -93,10 +93,11 @@ class BinarySearchTree {
     this._midTraverse(node, handler);
   }
 
+  //
   _midTraverse(node, handler) {
     if (node) {
       this._midTraverse(node.left, handler);
-      handler(node.key);
+      handler(node.key);//node.key  1  2  3  4 5 6
       this._midTraverse(node.right, handler);
     }
   }
@@ -108,5 +109,4 @@ class Node {
     this.left = null;
     this.right = null;
   }
-
 }
