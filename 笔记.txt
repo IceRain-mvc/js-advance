@@ -107,9 +107,22 @@ javascript
         快速排序
 
 
+2020年1月6日10:24:53 星期一
+
+    111111111
+    11111111
 
 
+    查找数字
+    1:排好顺序
+    2:判断
+    3:
 
+    二分查找
+    function search(target,start,end,num){
+      target和num比
+      //大了
+    }
 
 
 
