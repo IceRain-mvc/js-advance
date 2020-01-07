@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .app {
+            width: 20px;
+            height: 200px;
+            background-color: brown;
+        }
+        .green {
+            background-color: chartreuse;
+
+        }
+    </style>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+    <script src="jQuery.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <div class="wraper">1</div>
+    <br>
+    <div class="wraper two">2</div>
+    <br>
+    <div class="wraper">3</div>
+</div>
+
+<button onclick="change()"> 改变样式</button>
+
+<script>
+  function change(){
+    $("#app").addClass('app')
+    $(".two").addClass('green')
+
+
+    /*
+    * .animate({height:'400px'},function () {
+      $("#app").addClass('app').animate({width: '800px'});
+    })
+    *
+    * */
+  }
+
+</script>
+</body>
+</html>
