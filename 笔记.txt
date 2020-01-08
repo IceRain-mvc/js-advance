@@ -162,20 +162,28 @@ typescript 规范 js
     windows
     java  C  C++  php  C#
     C#
-
-
     C#  js  ts
     asp
-
     java js
     jsp
-
-
 
     前后端分离
 
 
 
+2020年1月8日10:38:52 星期三 天气晴
+    回顾:
+        ts:
+           js更规范
+           参数类型
+           返回值类型
+           声明类型
+           interface
+
+        AOP:面向切面编程.ts  大
+        OOP:es6 面向对象变成  对象.方法
+
+        接口
 
 
 
