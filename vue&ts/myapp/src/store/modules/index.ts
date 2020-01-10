@@ -1,6 +1,7 @@
-import menu from './menulist';
-import shopcar from './shopcar';
+import start from './start';
+import menu from './menu';
+import shop from './shop';
 
 export default {
-  menu, shopcar
+  menu,shop,start
 }

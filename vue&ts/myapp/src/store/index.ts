@@ -5,9 +5,13 @@ import rootModules from './rootModules';
 
 Vue.use(Vuex);
 
+/*
+* rootModules
+* modules  vuex modules
+* */
 const vuex = new Vuex.Store({
   modules,
-  ...rootModules,
+  ...rootModules
 });
 //@ts-ignore
 window.store = vuex;
