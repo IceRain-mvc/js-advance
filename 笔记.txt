@@ -222,9 +222,13 @@ ts:
 
     创建项目
 
+2020年1月11日10:23:03 星期六 天气阴
+    react+ts
 
 
-
+    create-react-app 项目名字 --template typescript
+    react-router-dom  : 核心
+    @types/react-router-dom : 对ts兼容
 
 
 
