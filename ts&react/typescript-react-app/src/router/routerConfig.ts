@@ -1,5 +1,6 @@
 import Home from "../views/Home";
 import MyShop from "../views/MyShop";
+import CardIn from "../views/CardIn";
 
 
 export default {
@@ -37,8 +38,12 @@ export default {
       component: Home
     },
     {
+      path: "/cardIn",
+      component: CardIn
+    },
+    {
       path: "/",
-      redirect: "/look"
+      redirect: "/cardIn"
     },
   ],
   routes2: []

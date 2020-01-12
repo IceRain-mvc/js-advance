@@ -1,4 +1,5 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux'
+import cardReducers from './reducers/cardReducers/cardList'
 
 //[]  {type:, payload}
 function myReducers(state = [], action: any) {
@@ -19,7 +20,7 @@ function shopReducers(state = 0, action: any) {
 }
 
 let reducers = combineReducers({
-  shopReducers
+  shopReducers,cardReducers
 });
 
 //方法 reducers 默认state  applyMiddleware()
